@@ -1,0 +1,89 @@
+@port=3308
+
+###
+GET http://localhost:{{port}}/greetings 
+
+###
+GET http://localhost:{{port}}/students
+
+###
+GET http://localhost:{{port}}/contact
+
+###
+POST http://localhost:{{port}}/send
+Content-Type: application/json
+
+{
+    "greetings": "George Clooney"
+}
+
+###
+GET http://localhost:{{port}}/getproduct
+Content-Type: application/json
+
+{
+    "ID": 1
+}
+
+###
+POST http://localhost:{{port}}/addnewproduct
+Content-Type: application/json
+
+{
+    "name": "Beach",
+    "stars": 4,
+    "description": "Clean decal of beach",
+    "favourite": 1,
+    "price": 300,
+    "imageUrl": "Beach.png"
+
+}
+
+###
+PUT http://localhost:{{port}}/products/7
+Content-Type: application/json
+
+{
+    "price": 300,
+    "name": "changed",
+    "stars": 3,
+    "description": "For Skull lovers",
+    "favourite": 0,
+    "imageUrl": "assets/skate3.webp"
+}
+
+###
+DELETE http://localhost:{{port}}/products/5
+Content-Type: application/json
+
+###
+GET  http://localhost:{{port}}/products
+
+###
+GET http://localhost:{{port}}/products/1
+
+###
+PUT http://localhost:{{port}}/setlive/2 
+
+###
+PUT http://localhost:{{port}}/setoffline/2
+
+###
+GET  http://localhost:{{port}}/
+
+###
+POST http://localhost:{{port}}/validateuser
+Content-Type: application/json
+
+{
+  "email": "ayush@email.com",
+  "password": "12345"
+}
+
+###
+PUT http://localhost:{{port}}/setLivestatus/1
+Content-Type: application/json
+
+{
+    "Live": true
+}
